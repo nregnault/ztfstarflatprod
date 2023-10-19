@@ -1,0 +1,14 @@
+numpy
+scipy
+scikit-sparse
+matplotlib
+seaborn
+pandas
+ipython
+jupyter
+dask
+astropy
+jaxlib
+jax
+pyarrow
+# saunerie @ git+https://gitlab.in2p3.fr/betoule/saunerie.git

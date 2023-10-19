@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# figure out prod prefix
+path=`readlink -f "${BASH_SOURCE:-$0}"`
+here=`dirname $path`
+prefix=`dirname $here`
+
+echo "setting up prod tree: prefix=$prefix"
+
+echo "setting up virtual env"
+python -m venv $prefix/ztfstarflatprod
+echo "activating virtual env"
+source $prefix/ztfstarflatprod/bin/activate
+
+echo "upgrading pip"
+pip install --upgrade pip
+echo "install required python packages"
+pip install -r $prefix/requirements.txt
